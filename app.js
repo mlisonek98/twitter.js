@@ -2,6 +2,11 @@ const express = require('express');
 const morgan = require('morgan');
 const app = express();
 const nunjucks = require('nunjucks');
+const routes = require('./routes')
+// const path = require('path');'
+app.use('/',routes)
+
+app.use(express.static(__dirname + '/public'));
 
 var locals = {
   title: 'An Example',
@@ -25,7 +30,7 @@ app.use(morgan("combined"));
 
 
 
-app.get("/", (req, res, next) => res.render('index.html', locals));
+// app.get("/", (req, res, next) => res.render('index.html', locals));
 
 
 
