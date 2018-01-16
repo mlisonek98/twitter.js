@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const app = express();
 
 app.use(morgan("combined"))
+console.log('hello');
 
 // app.use(function(req, res, next){
 // 	console.log(req.method + " " + req.path);
