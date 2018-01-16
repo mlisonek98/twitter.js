@@ -11,7 +11,7 @@ var locals = {
       { name: 'Hermione'}
   ]
 };
-console.log('hello');
+
 app.set('view engine', 'html');
 app.engine('html', nunjucks.render);
 nunjucks.configure('views', {noCache: true});
